@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/header_rl"/>
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/temukan"
+                    android:layout_below="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/temukan"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+<!--            <TextView-->
+<!--                android:id="@+id/test"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Kamu boleh cari"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/card1_title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Cari Resep Berdasarkan Bahan"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"/>-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/ket_cari_bahan"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/card1_title"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        android:text="Kamu Boleh tulis sendiri bahannya"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15sp" />-->
+
+                    <ImageView
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/search"/>
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edit_bahan"
+                        android:layout_toRightOf="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:hint="@string/edit_txt_ex"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:background="@color/white"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_text"
+                android:layout_width="120dp"
+                android:layout_height="55dp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="140dp"
+                android:layout_toRightOf="@+id/edit_bahan"
+                android:background="@drawable/btn_background_cari"
+                android:text="@string/btn_cari_resep"
+                android:textSize="13sp"/>
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/card_recipe_boong"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:cardBackgroundColor="@color/white"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                app:cardCornerRadius="10dp"-->
+<!--                android:padding="20dp">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/img_recipe"-->
+<!--                        android:layout_width="180dp"-->
+<!--                        android:layout_height="150dp" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/label_recipe"-->
+<!--                        android:layout_toRightOf="@+id/img_recipe"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Nama Resep"-->
+<!--                        android:layout_margin="10dp"-->
+<!--                        android:textSize="20sp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textStyle="bold"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/calories_recipe"-->
+<!--                        android:layout_toRightOf="@+id/img_recipe"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/label_recipe"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        android:text="Calories"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15sp" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/time_recipe"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/calories_recipe"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:layout_marginBottom="5dp"-->
+<!--                        android:layout_toRightOf="@+id/img_recipe"-->
+<!--                        android:text="Time"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/detail_recipe_boong"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_below="@+id/time_recipe"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:layout_marginBottom="15dp"-->
+<!--                        android:layout_toRightOf="@+id/img_recipe"-->
+<!--                        android:background="@drawable/btn_background"-->
+<!--                        android:padding="5dp"-->
+<!--                        android:text="Detail Resep" />-->
+
+<!--                </RelativeLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/recyclerview_recipe"-->
+<!--                android:layout_below="@id/ket_bahan"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginHorizontal="10dp"-->
+<!--                tools:listitem="@layout/item_recipe"/>-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_recipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_recipe"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

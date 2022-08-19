@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Out Of The Fridge</string>
+
+    //Main Activity
+    <string name="welcome">Selamat Datang di Out Of The Fridge</string>
+    <string name="temukan">Temukan resep sesuai dengan bahan yang ada di rumah</string>
+    <string name="edit_txt_ex">Masukkan bahan ex: Chicken,Bread</string>
+    <string name="btn_cari_resep">Cari Resep</string>
+
+    //Item Recipe
+    <string name="label">Nama Resep</string>
+    <string name="tl_id">ID: </string>
+    <string name="tl_url">URL: </string>
+    <string name="tl_calories">Calories:</string>
+    <string name="calories">Calories</string>
+    <string name="tl_minutes">Minutes</string>
+    <string name="tl_time">Time</string>
+    <string name="btn_detail_resep">Detail Resep</string>
+
+</resources>
